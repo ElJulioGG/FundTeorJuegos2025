@@ -1,0 +1,54 @@
+.vs/
+# Build results
+/bin/
+/obj/
+
+# User-specific files
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# VS Code settings
+.vscode/
+
+# ASP.NET Scaffolding
+ScaffoldingReadMe.txt
+
+# Dotnet CLI
+project.lock.json
+project.fragment.lock.json
+artifacts/
+
+# Optional NuGet packages
+*.nupkg
+*.snupkg
+packages/
+.nuget/
+
+# Build output
+*.exe
+*.dll
+*.app
+*.log
+
+# Publish output
+publish/
+
+# OS generated files
+.DS_Store
+Thumbs.db
+ehthumbs.db
+desktop.ini
+
+# Rider IDE
+.idea/
+
+# Backup files
+*.bak
+*.swp
+*.tmp
+
+# Logs
+*.log
+logs/
