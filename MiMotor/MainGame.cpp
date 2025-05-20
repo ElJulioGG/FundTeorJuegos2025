@@ -15,6 +15,7 @@ void MainGame::init()
 	}
 	SDL_GL_SetAttribute(SDL_GL_DOUBLEBUFFER, 1);
 	glClearColor(0.0f, 0.4f, 1.0f, 1.0f);
+	initShaders(); 
 }
 
 void MainGame::processInpout()
@@ -32,6 +33,15 @@ void MainGame::processInpout()
 	}
 }
 
+void MainGame::initShaders()
+{
+	program.compileShaders("Shaders/colorShaderVert.txt", "Shaders/colorShaderFrag.txt");
+	program.addAtribute("vertexPosition");
+	program.addAtribute("vertexColor");
+	program.addAtribute("vertexUV");
+	program.linkShader();
+}
+
 MainGame::MainGame()
 {
 }
@@ -47,7 +57,12 @@ void MainGame::run()
 	height = 600;
 	gamestate = GameState::PLAY;
 	init();
-	sprite.init(-1, -1, 1, 1);
+	//sprite.init(-1, -1, 1, 1, "Images/ricotofen.png");
+	sprites[0].init(-1.0f, -1.0f, 1.0f, 1.0f, "Images/ricotofen.png"); // abajo izquierda
+	sprites[1].init(0.0f, -1.0f, 1.0f, 1.0f, "Images/ricotofen.png"); // abajo derecha
+	sprites[2].init(-1.0f, 0.0f, 1.0f, 1.0f, "Images/ricotofen.png"); // arriba izquierda
+	sprites[3].init(0.0f, 0.0f, 1.0f, 1.0f, "Images/ricotofen.png"); // arriba derecha
+
 	update();
 }
 
@@ -61,8 +76,21 @@ void MainGame::update()
 
 void MainGame::draw()
 {
+	
 	glClearDepth(1.0);
 	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
-	sprite.draw();
+	time += 0.02f;
+	program.use();
+	glActiveTexture(GL_TEXTURE0);	
+	GLuint timeLocation = program.getUniformLocation("time");
+	glUniform1f(timeLocation, time);
+	GLuint textureLocation = program.getUniformLocation("myImage");
+	glUniform1i(textureLocation, 0);
+	//sprite.draw();
+	for (int i = 0; i < 4; i++) {
+		sprites[i].draw();
+	}
+
+	program.unuse();
 	SDL_GL_SwapWindow(window);
 }

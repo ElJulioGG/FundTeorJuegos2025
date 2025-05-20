@@ -4,7 +4,7 @@
 #include <EGL/eglplatform.h>
 #include <KHR/khrplatform.h>
 #include "sprite.h"
-
+#include "GLSProgram.h"
 enum class GameState {
 
 	PLAY, EXIT
@@ -14,10 +14,14 @@ class MainGame
 private:
 	int width;
 	int height ;
-	Sprite sprite;
+	float time= 0;  
+	Sprite sprites[4]; // Para manejar 4 imágenes
+
+	GLSProgram program;
 	SDL_Window* window;
 	void init();
 	void processInpout();
+	void initShaders();
 
 public:
 	MainGame();

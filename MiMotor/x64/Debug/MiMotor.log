@@ -1,0 +1,10 @@
+﻿  MainGame.cpp
+C:\Users\User\source\repos\MiMotor\MiMotor\MainGame.cpp(61,38): warning C4244: 'argumento': conversión de 'float' a 'int'; posible pérdida de datos
+C:\Users\User\source\repos\MiMotor\MiMotor\MainGame.cpp(61,32): warning C4244: 'argumento': conversión de 'float' a 'int'; posible pérdida de datos
+C:\Users\User\source\repos\MiMotor\MiMotor\MainGame.cpp(62,37): warning C4244: 'argumento': conversión de 'float' a 'int'; posible pérdida de datos
+C:\Users\User\source\repos\MiMotor\MiMotor\MainGame.cpp(62,31): warning C4244: 'argumento': conversión de 'float' a 'int'; posible pérdida de datos
+C:\Users\User\source\repos\MiMotor\MiMotor\MainGame.cpp(63,37): warning C4244: 'argumento': conversión de 'float' a 'int'; posible pérdida de datos
+C:\Users\User\source\repos\MiMotor\MiMotor\MainGame.cpp(63,31): warning C4244: 'argumento': conversión de 'float' a 'int'; posible pérdida de datos
+C:\Users\User\source\repos\MiMotor\MiMotor\MainGame.cpp(64,36): warning C4244: 'argumento': conversión de 'float' a 'int'; posible pérdida de datos
+C:\Users\User\source\repos\MiMotor\MiMotor\MainGame.cpp(64,30): warning C4244: 'argumento': conversión de 'float' a 'int'; posible pérdida de datos
+  MiMotor.vcxproj -> C:\Users\User\source\repos\MiMotor\x64\Debug\MiMotor.exe
