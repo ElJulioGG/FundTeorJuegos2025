@@ -27,7 +27,14 @@ void MainGame::processInpout()
 			gamestate = GameState::EXIT;
 			break;
 		case SDL_EVENT_MOUSE_MOTION:
-			cout << " Pos x:" << event.motion.x << " Pos y:" << event.motion.y << endl;
+			inputManager.setMouseCoords(event.motion.x, event.motion.y);
+			//cout << " Pos x:" << event.motion.x << " Pos y:" << event.motion.y << endl;
+			break;
+		case SDL_EVENT_KEY_DOWN:
+			inputManager.pressKey(event.key.key);
+			break;
+		case SDL_EVENT_KEY_UP:
+			inputManager.releaseKey(event.key.key);
 			break;
 		}
 	}
@@ -58,10 +65,11 @@ void MainGame::run()
 	gamestate = GameState::PLAY;
 	init();
 	//sprite.init(-1, -1, 1, 1, "Images/ricotofen.png");
-	sprites[0].init(-1.0f, -1.0f, 1.0f, 1.0f, "Images/ricotofen.png"); // abajo izquierda
-	sprites[1].init(0.0f, -1.0f, 1.0f, 1.0f, "Images/ricotofen.png"); // abajo derecha
-	sprites[2].init(-1.0f, 0.0f, 1.0f, 1.0f, "Images/ricotofen.png"); // arriba izquierda
-	sprites[3].init(0.0f, 0.0f, 1.0f, 1.0f, "Images/ricotofen.png"); // arriba derecha
+
+	sprites.push_back(new Sprite());
+	sprites.back()->init(-0.5f, -1.0f, 1.0f, 1.0f, "Images/ricotofen.png"); 
+	sprites.push_back(new Sprite());
+	sprites.back()->init(-0.5f, 0, 1.0f, 1.0f, "Images/instak.png");
 
 	update();
 }
@@ -86,9 +94,9 @@ void MainGame::draw()
 	glUniform1f(timeLocation, time);
 	GLuint textureLocation = program.getUniformLocation("myImage");
 	glUniform1i(textureLocation, 0);
-	//sprite.draw();
-	for (int i = 0; i < 4; i++) {
-		sprites[i].draw();
+
+	for (size_t i = 0; i < sprites.size(); i++) {
+		sprites[i]->draw();
 	}
 
 	program.unuse();

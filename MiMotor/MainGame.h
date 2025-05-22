@@ -5,6 +5,9 @@
 #include <KHR/khrplatform.h>
 #include "sprite.h"
 #include "GLSProgram.h"
+#include <vector>
+#include "InputManager.h"
+#include "Camera2D.h"
 enum class GameState {
 
 	PLAY, EXIT
@@ -14,9 +17,11 @@ class MainGame
 private:
 	int width;
 	int height ;
+	InputManager inputManager;
+	Camera2D camera2D;
 	float time= 0;  
-	Sprite sprites[4]; // Para manejar 4 imágenes
-
+	Sprite sprite;
+	vector<Sprite*>sprites;
 	GLSProgram program;
 	SDL_Window* window;
 	void init();

@@ -1,7 +1,7 @@
 #include "Sprite.h"
 #include "Vertex.h"
 #include <cstddef>
-#include "ImageLoader.h"
+#include "ResourceManager.h"
 Sprite::Sprite()
 {
 	vboID = 0;
@@ -22,7 +22,9 @@ void Sprite::init(float x, float y, int width, int height, string texturePath)
 	if (vboID == 0) {
 		glGenBuffers(1, &vboID);
 	}
-	texture = ImageLoader::loadPNG(texturePath);
+	//texture = ImageLoader::loadPNG(texturePath);
+
+	texture = ResourceManager::getTexture(texturePath);
 	Vertex vertexData[6];
 	vertexData[0].setPosition(x + width, y + height);
 	vertexData[1].setPosition(x , y + height);

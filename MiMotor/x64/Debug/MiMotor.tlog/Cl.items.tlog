@@ -1,10 +1,16 @@
+C:\Users\User\source\repos\MiMotor\MiMotor\Camera2D.cpp;C:\Users\User\source\repos\MiMotor\MiMotor\x64\Debug\Camera2D.obj
+C:\Users\User\source\repos\MiMotor\MiMotor\Entity.cpp;C:\Users\User\source\repos\MiMotor\MiMotor\x64\Debug\Entity.obj
 C:\Users\User\source\repos\MiMotor\MiMotor\Error.cpp;C:\Users\User\source\repos\MiMotor\MiMotor\x64\Debug\Error.obj
 C:\Users\User\source\repos\MiMotor\MiMotor\GLSProgram.cpp;C:\Users\User\source\repos\MiMotor\MiMotor\x64\Debug\GLSProgram.obj
+C:\Users\User\source\repos\MiMotor\MiMotor\Human.cpp;C:\Users\User\source\repos\MiMotor\MiMotor\x64\Debug\Human.obj
 C:\Users\User\source\repos\MiMotor\MiMotor\ImageLoader.cpp;C:\Users\User\source\repos\MiMotor\MiMotor\x64\Debug\ImageLoader.obj
+C:\Users\User\source\repos\MiMotor\MiMotor\InputManager.cpp;C:\Users\User\source\repos\MiMotor\MiMotor\x64\Debug\InputManager.obj
 C:\Users\User\source\repos\MiMotor\MiMotor\IOManager.cpp;C:\Users\User\source\repos\MiMotor\MiMotor\x64\Debug\IOManager.obj
 C:\Users\User\source\repos\MiMotor\MiMotor\MainGame.cpp;C:\Users\User\source\repos\MiMotor\MiMotor\x64\Debug\MainGame.obj
 C:\Users\User\source\repos\MiMotor\MiMotor\MiMotor.cpp;C:\Users\User\source\repos\MiMotor\MiMotor\x64\Debug\MiMotor.obj
 C:\Users\User\source\repos\MiMotor\MiMotor\picoPNG.cpp;C:\Users\User\source\repos\MiMotor\MiMotor\x64\Debug\picoPNG.obj
 C:\Users\User\source\repos\MiMotor\MiMotor\ResourceManager.cpp;C:\Users\User\source\repos\MiMotor\MiMotor\x64\Debug\ResourceManager.obj
 C:\Users\User\source\repos\MiMotor\MiMotor\Sprite.cpp;C:\Users\User\source\repos\MiMotor\MiMotor\x64\Debug\Sprite.obj
+C:\Users\User\source\repos\MiMotor\MiMotor\SpriteBatch.cpp;C:\Users\User\source\repos\MiMotor\MiMotor\x64\Debug\SpriteBatch.obj
 C:\Users\User\source\repos\MiMotor\MiMotor\TextureCache.cpp;C:\Users\User\source\repos\MiMotor\MiMotor\x64\Debug\TextureCache.obj
+C:\Users\User\source\repos\MiMotor\MiMotor\Zombie.cpp;C:\Users\User\source\repos\MiMotor\MiMotor\x64\Debug\Zombie.obj
